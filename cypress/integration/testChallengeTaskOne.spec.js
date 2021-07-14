@@ -30,4 +30,13 @@ describe('what3words - Test Automation Challenge', () => {
       searchPanel.printW3WAddress()
     })
   })
+
+  const invalidAddress = 'asdsadasd.asdda.sdsdddd45.6789sdds'
+  context('Invalid w3w address should throw warning', function () {
+    it('should display warning message for invalid address', () => {
+      searchPanel.searchFor(invalidAddress)
+      searchPanel.getWarningMessage().should('have.text', 'No address found.Please try searching for the town or nearby place and zoom in to find the what3words address.')
+    })
+  })
+
 })
