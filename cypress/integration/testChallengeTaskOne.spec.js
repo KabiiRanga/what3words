@@ -3,7 +3,7 @@ const searchPanel = require('./pages/searchPanel.js')
 
 describe('what3words - Test Automation Challenge', () => {
 
-  const what3words = 'brand.herbs.locked'
+  const what3words = 'certified.potato.vine'
   context('Search and select the 3 words address', function () {
     it('should allow me to search and select w3w', () => {
       searchPanel.searchFor(what3words)
@@ -11,8 +11,8 @@ describe('what3words - Test Automation Challenge', () => {
     })
   })
 
-  const searchAddress = 'london eye'
-  const expAddress = 'London Eye Pier'
+  const searchAddress = 'Tower Bridge'
+  const expAddress = 'Tower Bridge hotel'
   context('Search for a location with partial text match', function () {
     it('should be given 5 matched locations and allow me to select desired one', () => {
       searchPanel.searchFor(searchAddress)
@@ -20,8 +20,8 @@ describe('what3words - Test Automation Challenge', () => {
     })
   })
 
-  const coordinates = '51.90983966269116, -0.439632560217837'
-  const lang = 'French'
+  const coordinates = '51.521251, -0.20358600'
+  const lang = 'German'
   context('Find w3w by coordinates in any language', function () {
     it('should allow me to change w3w language and search by coordinates', () => {
       cy.switchToLang(lang)
@@ -31,7 +31,7 @@ describe('what3words - Test Automation Challenge', () => {
     })
   })
 
-  const invalidAddress = 'asdsadasd.asdda.sdsdddd45.6789sdds'
+  const invalidAddress = 'hear.limited.frown.know'
   context('Invalid w3w address should throw warning', function () {
     it('should display warning message for invalid address', () => {
       searchPanel.searchFor(invalidAddress)
