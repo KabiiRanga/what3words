@@ -10,4 +10,14 @@ describe('what3words - Test Automation Challenge', () => {
       searchPanel.selectW3WFromResults(what3words)
     })
   })
+
+  const searchAddress = 'london eye'
+  const expAddress = 'London Eye Pier'
+  context('Search for a location with partial text match', function () {
+    it('should be given 5 matched locations and allow me to select desired one', () => {
+      searchPanel.searchFor(searchAddress)
+      searchPanel.selectLocationFromResults(expAddress)
+    })
+  })
+
 })
