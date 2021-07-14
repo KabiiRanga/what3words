@@ -4,9 +4,11 @@
   "description": "Automation challenge tasks",
   "main": "n",
   "scripts": {
+    "lint": "standard",
+    "lint:fix": "standard --fix",
     "cyOpen": "cypress open",
     "cyRun": "cypress run --spec cypress/integration/testChallengeTaskOne.spec.js",
-    "cyRunParallel": "cypress run --spec cypress/integration/testChallengeTaskOne.spec.js --parallel  --record"
+    "cyRun:DashboardUpdate": "cypress run --spec cypress/integration/testChallengeTaskOne.spec.js --ci-build-id githubActions --parallel --record --key 65b675ed-04d2-41b3-ac5b-81eb2b06c553"
   },
   "repository": {
     "type": "git",
@@ -19,6 +21,7 @@
   },
   "homepage": "https://github.com/KabiiRanga/what3words#readme",
   "devDependencies": {
-    "cypress": "^7.7.0"
+    "cypress": "^7.7.0",
+    "standard": "^16.0.3"
   }
 }
