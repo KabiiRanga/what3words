@@ -1,0 +1,24 @@
+{
+  "name": "what3words",
+  "version": "1.0.0",
+  "description": "Automation challenge tasks",
+  "main": "n",
+  "scripts": {
+    "cyOpen": "cypress open",
+    "cyRun": "cypress run --spec cypress/integration/testChallengeTaskOne.spec.js",
+    "cyRunParallel": "cypress run --spec cypress/integration/testChallengeTaskOne.spec.js --parallel  --record"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KabiiRanga/what3words.git"
+  },
+  "author": "Kabilraj Ranganathan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KabiiRanga/what3words/issues"
+  },
+  "homepage": "https://github.com/KabiiRanga/what3words#readme",
+  "devDependencies": {
+    "cypress": "^7.7.0"
+  }
+}
