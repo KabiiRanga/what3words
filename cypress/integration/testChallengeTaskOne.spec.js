@@ -2,7 +2,6 @@ import './hooks/webHooks'
 const searchPanel = require('./pages/searchPanel.js')
 
 describe('what3words - Test Automation Challenge', () => {
-
   const what3words = 'certified.potato.vine'
   context('Search and select the 3 words address', function () {
     it('should allow me to search and select w3w', () => {
@@ -38,5 +37,4 @@ describe('what3words - Test Automation Challenge', () => {
       searchPanel.getWarningMessage().should('have.text', 'No address found.Please try searching for the town or nearby place and zoom in to find the what3words address.')
     })
   })
-
 })
