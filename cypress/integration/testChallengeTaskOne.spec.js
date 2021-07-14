@@ -20,4 +20,14 @@ describe('what3words - Test Automation Challenge', () => {
     })
   })
 
+  const coordinates = '51.90983966269116, -0.439632560217837'
+  const lang = 'French'
+  context('Find w3w by coordinates in any language', function () {
+    it('should allow me to change w3w language and search by coordinates', () => {
+      cy.switchToLang(lang)
+      searchPanel.searchFor(coordinates)
+      searchPanel.submitSearch()
+      searchPanel.printW3WAddress()
+    })
+  })
 })
